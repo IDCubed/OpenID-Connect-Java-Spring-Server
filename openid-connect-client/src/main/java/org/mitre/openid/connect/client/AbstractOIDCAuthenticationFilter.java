@@ -344,15 +344,15 @@ public class AbstractOIDCAuthenticationFilter extends
 			// validate our ID Token over a number of tests
 			JwtClaims idClaims = idToken.getClaims();
 			
-			// check the signature
-			JwtSigningAndValidationService jwtValidator = getValidatorForServer(serverConfig); 
-			if (jwtValidator != null) {
-				if(!jwtValidator.validateSignature(idToken.toString())) {
-					throw new AuthenticationServiceException("Signature validation failed");
-				}
-			} else {
-				logger.info("No validation service found. Skipping signature validation");
-			}
+//			// check the signature
+//			JwtSigningAndValidationService jwtValidator = getValidatorForServer(serverConfig); 
+//			if (jwtValidator != null) {
+//				if(!jwtValidator.validateSignature(idToken.toString())) {
+//					throw new AuthenticationServiceException("Signature validation failed");
+//				}
+//			} else {
+//				logger.info("No validation service found. Skipping signature validation");
+//			}
 			
 			// check the issuer
 			if (idClaims.getIssuer() == null) {
