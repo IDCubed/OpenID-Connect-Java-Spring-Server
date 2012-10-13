@@ -187,7 +187,7 @@ public class AbstractOIDCAuthenticationFilter extends
 		Assert.notNull(errorRedirectURI, "An Error Redirect URI must be supplied");
 
 		// prepend the spec necessary DEFAULT_SCOPE
-		setScope((scope != null && !scope.isEmpty()) ? DEFAULT_SCOPE + " " + scope : DEFAULT_SCOPE);
+		setScope((scope != null && !scope.isEmpty()) ? DEFAULT_SCOPE + "," + scope : DEFAULT_SCOPE);
 	}
 
 	/*
