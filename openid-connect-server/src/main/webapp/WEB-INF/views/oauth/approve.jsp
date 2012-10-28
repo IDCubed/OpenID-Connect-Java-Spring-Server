@@ -24,8 +24,7 @@
     <div class="well" style="text-align:center">
         <h1>Approve New Site</h1>
 
-        <form name="confirmationForm" style="display:inline" action="<%=request.getContextPath()%>/oauth/authorize"
-              method="post">
+        <form name="confirmationForm" style="display:inline" action="<%=request.getContextPath()%>/authorize" method="post">
 
             <div class="row">
                 <div class="span4 offset2 well-small" style="text-align:left">
@@ -111,4 +110,4 @@
         <o:copyright/>
     </div>
 </div>
-<o:footer loadapp="false"/>
+<o:footer/>

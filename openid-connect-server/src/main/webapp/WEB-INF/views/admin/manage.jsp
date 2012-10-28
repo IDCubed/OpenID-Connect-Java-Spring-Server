@@ -10,13 +10,14 @@
     <div class="row-fluid">
         <o:sidebar/>
         <div class="span10">
-            <div class="content">
+            <div class="content span12">
                 <o:breadcrumbs crumb="Manage Clients"/>
-
-                <span id="content"></span>
+                <span id="content">
+                    loading...
+                </span>
                 <o:copyright/>
             </div>
         </div>
     </div>
 </div>
-<o:footer/>
+<o:footer js="resources/js/admin.js"/>
