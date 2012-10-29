@@ -8,41 +8,28 @@
     <name>OpenIdConnect Server</name>
     <packaging>war</packaging>
     <parent>
-    	<groupId>org.mitre</groupId>
-    	<artifactId>openid-connect-parent</artifactId>
-    	<version>0.1-SNAPSHOT</version>
-    	<relativePath>..</relativePath>
+        <groupId>org.mitre</groupId>
+        <artifactId>openid-connect-parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
     </parent>
     <dependencies>
-		<dependency>
-			<groupId>org.springframework.security.oauth</groupId>
-			<version>1.0.0.BUILD-SNAPSHOT</version>
-			<artifactId>spring-security-oauth2</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.mitre</groupId>
-			<artifactId>openid-connect-common</artifactId>
-			<version>0.1-SNAPSHOT</version>
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.security.oauth</groupId>
+            <version>1.0.0.BUILD-SNAPSHOT</version>
+            <artifactId>spring-security-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mitre</groupId>
+            <artifactId>openid-connect-common</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
     <description>Reference implementation of OpenID Connect spec (http://openid.net/connect/).
     </description>
     <url></url>
     <build>
         <plugins>
-	        <plugin>
-	            <artifactId>maven-source-plugin</artifactId>
-	            <version>2.1.2</version>
-	            <groupId>org.apache.maven.plugins</groupId>
-	            <executions>
-	                <execution>
-	                    <id>attach-sources</id>
-	                <goals>
-	                    <goal>jar-no-fork</goal>
-	                </goals>
-	                </execution>
-	            </executions>
-	        </plugin>        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -55,14 +42,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <executions>
-					<execution>
-						<id>prepare-war</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>exploded</goal>
-						</goals>
-					</execution>
-				</executions>
+                    <execution>
+                        <id>prepare-war</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>exploded</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <warName>openid-connect-server</warName>
                     <useCache>true</useCache>
@@ -121,6 +108,19 @@
                         <goals>
                             <goal>cobertura</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                    <goals>
+                        <goal>jar-no-fork</goal>
+                    </goals>
                     </execution>
                 </executions>
             </plugin>
